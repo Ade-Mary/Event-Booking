@@ -1,6 +1,7 @@
 package com.example.eventbooking.controller;
 
 import com.example.eventbooking.dto.EventDto;
+import com.example.eventbooking.service.EventService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;

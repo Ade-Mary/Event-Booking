@@ -1,5 +1,5 @@
 package com.example.eventbooking.model;
 
 public enum Role {
-    ADMIN, ORGANIZER, ATTENDEE
+    ADMIN, ORGANIZER, ATTENDEE, USER
 }

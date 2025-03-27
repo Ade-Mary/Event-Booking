@@ -13,26 +13,19 @@ import java.time.LocalDateTime;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Booking {
-
+public class Wishlist {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "event_id")
-    private Event event;
+    @JoinColumn(name = "user_id", nullable = false)
+    private User user;
 
     @ManyToOne
-    @JoinColumn(name = "user_id")
-    private User attendee;
+    @JoinColumn(name = "event_id", nullable = false)
+    private Event event;
 
-    private LocalDateTime bookingTime;
-
-
-    private boolean checkedIn = false;
-
-    @Lob
-    private String qrCode;
+    private LocalDateTime addedAt = LocalDateTime.now();
 }
 
